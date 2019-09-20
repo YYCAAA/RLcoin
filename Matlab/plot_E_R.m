@@ -28,6 +28,7 @@ title(['Optimal \mu when f=',num2str(f),', R_+=',num2str(R_plus),', R_-=',num2st
 %%
 figure
 plot(0:20,pmf{1,2})
+hold on
 plot(0:20,pmf{1,3})
 ylabel('P(i)')
 xlabel('i')
@@ -35,11 +36,11 @@ hold on
 grid on
 plot(0:20,cumsum(pmf{1,2}))
 plot(0:20,cumsum(pmf{1,3}))
-legend('Prob. mass wrt. I=i(mu=2)','Prob. mass sum until i(mu=2)','Prob. mass wrt. I=i(mu=3)','Prob. mass sum until i(mu=3)')
+legend('Prob. mass wrt. I=i(mu=2)','Prob. mass wrt. I=i(mu=3)','Prob. mass sum until i(mu=2)','Prob. mass sum until i(mu=3)')
 
 figure
 plot(0:20,log(1-cumsum(pmf{1,2})))
 hold on
 grid on
 plot(0:20,log(1-cumsum(pmf{1,3})))
-legend('log of prob.sum until i(\mu=2)','log of prob.sum until i(\mu=3)')
+legend('log of prob.loss until i(\mu=2)','log of prob.loss until i(\mu=3)')
