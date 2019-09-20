@@ -32,7 +32,6 @@ hold on
 plot(0:20,pmf{1,3})
 ylabel('P(i)')
 xlabel('i')
-hold on
 grid on
 plot(0:20,cumsum(pmf{1,2}))
 plot(0:20,cumsum(pmf{1,3}))
